@@ -1,0 +1,2344 @@
+openapi: 3.0.1
+info:
+  contact:
+    email: info@gemini-commerce.com
+    name: Gemini Team
+  license:
+    name: Gemini fair use license
+    url: https://gemini-commerce.com/api/fair-use-license
+  title: RMA Service
+  version: v1
+servers:
+- url: https://rma.api.gogemini.io/
+tags:
+- description: RMA Description
+  externalDocs:
+    url: https://gemini-commerce.com/api/rma
+  name: Rma
+paths:
+  /rma.Rma/AddNote:
+    post:
+      operationId: AddNote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaAddNoteRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaNoteResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Add a note to an RMA
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/ApproveReturn:
+    post:
+      operationId: ApproveReturn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaApproveReturnRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Bad Request
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Approve a return
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/CancelReturn:
+    post:
+      operationId: CancelReturn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaCancelReturnRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaCancelReturnResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Cancel a return
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/ConfirmReturnApproveItems:
+    post:
+      operationId: ConfirmReturnApproveItems
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaConfirmReturnApproveItemsRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaConfirmReturnApproveItemsResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Confirm return approve items
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/CreateReturn:
+    post:
+      operationId: CreateReturn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaCreateReturnRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaReturnResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Create a return
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/DeleteNote:
+    post:
+      operationId: DeleteNote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaDeleteNoteRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaDeleteNoteResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Delete a note from an RMA
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/EditNote:
+    post:
+      operationId: EditNote
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaEditNoteRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaNoteResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Edit a note on an RMA
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/GetReturn:
+    post:
+      operationId: GetReturn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaGetReturnRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaReturnResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Get a return
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/ListNotesByReturnId:
+    post:
+      operationId: ListNotesByReturnId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaListNotesByReturnIdRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaListNotesByReturnIdResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: List notes by return id
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/ListReturns:
+    post:
+      operationId: ListReturns
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaListReturnsRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaListReturnsResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: List returns
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/RefundReturn:
+    post:
+      operationId: RefundReturn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaRefundReturnRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaRefundReturnResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Refund a return
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/RejectReturn:
+    post:
+      operationId: RejectReturn
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaRejectReturnRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaRejectReturnResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Reject a return
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/SetReceivedItems:
+    post:
+      operationId: SetReceivedItems
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaSetReceivedItemsRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaSetReceivedItemsResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Set received items
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+  /rma.Rma/SkipReturnStatus:
+    post:
+      operationId: SkipReturnStatus
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/rmaSkipReturnStatusRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rmaSkipReturnStatusResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      security:
+      - standardAuthorization: []
+      summary: Skip a return status
+      tags:
+      - Rma
+      x-codegen-request-body-name: body
+components:
+  schemas:
+    CreateReturnRequestProduct:
+      properties:
+        grn:
+          type: string
+        quantity:
+          format: uint64
+          type: string
+        reason:
+          type: string
+        note:
+          type: string
+      required:
+      - grn
+      - quantity
+      type: object
+    EditNoteRequestPayload:
+      properties:
+        author:
+          type: string
+        note:
+          type: string
+      type: object
+    ListReturnsRequestFilter:
+      properties:
+        searchTerms:
+          items:
+            type: string
+          title: search_terms is the search terms to be applied on the list of returns.
+            This will be applied on the same field as the filters
+          type: array
+        returnIds:
+          items:
+            type: string
+          type: array
+        returnStatus:
+          items:
+            type: string
+          type: array
+        orderGrns:
+          items:
+            type: string
+          type: array
+        orderNumbers:
+          items:
+            type: string
+          type: array
+        orderItemGrns:
+          items:
+            type: string
+          type: array
+        orderItemSkus:
+          items:
+            type: string
+          type: array
+        customerGrns:
+          items:
+            type: string
+          type: array
+        customerEmails:
+          items:
+            type: string
+          type: array
+        createdAtStart:
+          format: date-time
+          type: string
+        createdAtEnd:
+          format: date-time
+          type: string
+      type: object
+    OrderDataSubtotal:
+      example:
+        code: null
+        value:
+          micros: 5
+          units: units
+      properties:
+        code:
+          $ref: '#/components/schemas/OrderDataSubtotalCode'
+        value:
+          $ref: '#/components/schemas/rmaMoney'
+      type: object
+    OrderDataSubtotalCode:
+      default: UNKNOWN
+      description: |2-
+         - ITEMS: gross discount items amount.
+         - ITEMS_DISCOUNTED: discounted items amount.
+         - DISCOUNT: discount amount. It is a NEGATIVE amount.
+      enum:
+      - UNKNOWN
+      - PAYMENT
+      - SHIPMENT
+      - TAX
+      - ITEMS
+      - ITEMS_DISCOUNTED
+      - DISCOUNT
+      type: string
+    OrderDataTotal:
+      example:
+        code: null
+        value:
+          micros: 5
+          units: units
+      properties:
+        code:
+          $ref: '#/components/schemas/OrderDataTotalCode'
+        value:
+          $ref: '#/components/schemas/rmaMoney'
+      type: object
+    OrderDataTotalCode:
+      default: UNKNOWN
+      enum:
+      - UNKNOWN
+      - ORDERED
+      - PAID
+      - REFUNDED
+      type: string
+    protobufAny:
+      additionalProperties:
+        type: object
+      example:
+        '@type': '@type'
+      properties:
+        '@type':
+          type: string
+      type: object
+    protobufNullValue:
+      default: NULL_VALUE
+      description: |-
+        `NullValue` is a singleton enumeration to represent the null value for the
+        `Value` type union.
+
+         The JSON representation for `NullValue` is JSON `null`.
+
+         - NULL_VALUE: Null value.
+      enum:
+      - NULL_VALUE
+      type: string
+    rmaAddNoteRequest:
+      properties:
+        tenantId:
+          type: string
+        returnId:
+          type: string
+        author:
+          type: string
+        note:
+          type: string
+      required:
+      - author
+      - note
+      - returnId
+      - tenantId
+      type: object
+    rmaApproveReturnRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+        refundShippingCost:
+          type: boolean
+        refundPaymentCost:
+          type: boolean
+        items:
+          items:
+            $ref: '#/components/schemas/rmaApproveReturnRequestItem'
+          type: array
+      required:
+      - id
+      - items
+      - refundPaymentCost
+      - refundShippingCost
+      - tenantId
+      type: object
+    rmaApproveReturnRequestItem:
+      properties:
+        grn:
+          type: string
+        quantity:
+          format: uint64
+          type: string
+      required:
+      - grn
+      - quantity
+      type: object
+    rmaApproveReturnResponse:
+      type: object
+    rmaCancelReturnRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaCancelReturnResponse:
+      type: object
+    rmaConfirmReturnApproveItemsRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+        items:
+          items:
+            $ref: '#/components/schemas/rmaConfirmReturnApproveItemsRequestItem'
+          type: array
+      required:
+      - id
+      - items
+      - tenantId
+      type: object
+    rmaConfirmReturnApproveItemsRequestItem:
+      properties:
+        grn:
+          type: string
+        quantity:
+          format: uint64
+          type: string
+      required:
+      - grn
+      - quantity
+      type: object
+    rmaConfirmReturnApproveItemsResponse:
+      type: object
+    rmaCreateReturnRequest:
+      properties:
+        tenantId:
+          type: string
+        orderGrn:
+          type: string
+        products:
+          items:
+            $ref: '#/components/schemas/CreateReturnRequestProduct'
+          type: array
+        preferredRefundMethod:
+          $ref: '#/components/schemas/rmaRefundMethod'
+        refundShippingCost:
+          type: boolean
+        refundPaymentCost:
+          type: boolean
+        customerInfo:
+          $ref: '#/components/schemas/rmaCustomerInfo'
+        returnAddress:
+          $ref: '#/components/schemas/rmaPostalAddress'
+        note:
+          type: string
+      required:
+      - orderGrn
+      - preferredRefundMethod
+      - products
+      - tenantId
+      type: object
+    rmaCurrency:
+      default: XXX
+      description: "Stands for Albania, not all ;-)"
+      enum:
+      - XXX
+      - ALL
+      - DZD
+      - ARS
+      - AUD
+      - BSD
+      - BHD
+      - BDT
+      - AMD
+      - BBD
+      - BMD
+      - BTN
+      - BOB
+      - BWP
+      - BZD
+      - SBD
+      - BND
+      - MMK
+      - BIF
+      - KHR
+      - CAD
+      - CVE
+      - KYD
+      - LKR
+      - CLP
+      - CNY
+      - COP
+      - KMF
+      - CRC
+      - HRK
+      - CUP
+      - CZK
+      - DKK
+      - DOP
+      - SVC
+      - ETB
+      - ERN
+      - FKP
+      - FJD
+      - DJF
+      - GMD
+      - GIP
+      - GTQ
+      - GNF
+      - GYD
+      - HTG
+      - HNL
+      - HKD
+      - HUF
+      - ISK
+      - INR
+      - IDR
+      - IRR
+      - IQD
+      - ILS
+      - JMD
+      - JPY
+      - KZT
+      - JOD
+      - KES
+      - KPW
+      - KRW
+      - KWD
+      - KGS
+      - LAK
+      - LBP
+      - LSL
+      - LRD
+      - LYD
+      - LTL
+      - MOP
+      - MWK
+      - MYR
+      - MVR
+      - MRO
+      - MUR
+      - MXN
+      - MNT
+      - MDL
+      - MAD
+      - OMR
+      - NAD
+      - NPR
+      - ANG
+      - AWG
+      - VUV
+      - NZD
+      - NIO
+      - NGN
+      - NOK
+      - PKR
+      - PAB
+      - PGK
+      - PYG
+      - PEN
+      - PHP
+      - QAR
+      - RUB
+      - RWF
+      - SHP
+      - STD
+      - SAR
+      - SCR
+      - SLL
+      - SGD
+      - VND
+      - SOS
+      - ZAR
+      - SSP
+      - SZL
+      - SEK
+      - CHF
+      - SYP
+      - THB
+      - TOP
+      - TTD
+      - AED
+      - TND
+      - UGX
+      - MKD
+      - EGP
+      - GBP
+      - TZS
+      - USD
+      - UYU
+      - UZS
+      - WST
+      - YER
+      - TWD
+      - CUC
+      - ZWL
+      - TMT
+      - GHS
+      - VEF
+      - SDG
+      - UYI
+      - RSD
+      - MZN
+      - AZN
+      - RON
+      - CHE
+      - CHW
+      - TRY
+      - XAF
+      - XCD
+      - XOF
+      - XPF
+      - XBA
+      - XBB
+      - XBC
+      - XBD
+      - XAU
+      - XDR
+      - XAG
+      - XPT
+      - XPD
+      - XUA
+      - ZMW
+      - SRD
+      - MGA
+      - COU
+      - AFN
+      - TJS
+      - AOA
+      - BYR
+      - BGN
+      - CDF
+      - BAM
+      - EUR
+      - MXV
+      - UAH
+      - GEL
+      - BOV
+      - PLN
+      - BRL
+      - CLF
+      - XSU
+      - USN
+      title: |-
+        - XXX: XXX = 999; //Changed to 0 because proto3 requires the default to be 0
+         - ALL: XTS = 963; //Codes specifically reserved for testing purposes
+      type: string
+    rmaCustomerInfo:
+      example:
+        firstname: firstname
+        grn: grn
+        phone: phone
+        email: email
+        lastname: lastname
+      properties:
+        firstname:
+          type: string
+        lastname:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        grn:
+          type: string
+      type: object
+    rmaDeleteNoteRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaDeleteNoteResponse:
+      type: object
+    rmaEditNoteRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+        payload:
+          $ref: '#/components/schemas/EditNoteRequestPayload'
+        payloadMask:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaGetReturnRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaListNotesByReturnIdRequest:
+      properties:
+        tenantId:
+          type: string
+        returnId:
+          type: string
+        pageSize:
+          format: int64
+          title: "page_size if not set, it will return all the notes"
+          type: integer
+        pageToken:
+          type: string
+        sorts:
+          items:
+            $ref: '#/components/schemas/rmaListNotesByReturnIdRequestSort'
+          type: array
+      required:
+      - returnId
+      - tenantId
+      type: object
+    rmaListNotesByReturnIdRequestSort:
+      properties:
+        evaluationOrder:
+          description: "evaluation_order is the order in which the sort will be applied.\
+            \ The lower the number, the earlier the sort will be applied."
+          format: int64
+          type: integer
+        field:
+          $ref: '#/components/schemas/rmaListNotesByReturnIdRequestSortSortField'
+        order:
+          $ref: '#/components/schemas/rmaSortOrder'
+      required:
+      - evaluationOrder
+      - field
+      type: object
+    rmaListNotesByReturnIdRequestSortSortField:
+      default: UNKNOWN
+      enum:
+      - UNKNOWN
+      - DATE
+      type: string
+    rmaListNotesByReturnIdResponse:
+      example:
+        notes:
+        - note: note
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          grn: grn
+          deletedAt: 2000-01-23T04:56:07.000+00:00
+          author: author
+          id: id
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - note: note
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          grn: grn
+          deletedAt: 2000-01-23T04:56:07.000+00:00
+          author: author
+          id: id
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        nextPageToken: nextPageToken
+      properties:
+        notes:
+          items:
+            $ref: '#/components/schemas/rmaNoteResponse'
+          type: array
+        nextPageToken:
+          type: string
+      type: object
+    rmaListReturnsRequest:
+      properties:
+        tenantId:
+          type: string
+        pageSize:
+          format: int64
+          title: "page_size if not set, it will return all the notes"
+          type: integer
+        pageToken:
+          type: string
+        sorts:
+          items:
+            $ref: '#/components/schemas/rmaListReturnsRequestSort'
+          type: array
+        filterMask:
+          type: string
+        filter:
+          $ref: '#/components/schemas/ListReturnsRequestFilter'
+      required:
+      - tenantId
+      type: object
+    rmaListReturnsRequestSort:
+      properties:
+        evaluationOrder:
+          description: "evaluation_order is the order in which the sort will be applied.\
+            \ The lower the number, the earlier the sort will be applied."
+          format: int64
+          type: integer
+        field:
+          $ref: '#/components/schemas/rmaListReturnsRequestSortSortField'
+        order:
+          $ref: '#/components/schemas/rmaSortOrder'
+      required:
+      - evaluationOrder
+      - field
+      type: object
+    rmaListReturnsRequestSortSortField:
+      default: UNKNOWN
+      enum:
+      - UNKNOWN
+      - DATE
+      type: string
+    rmaListReturnsResponse:
+      example:
+        nextPageToken: nextPageToken
+        returns:
+        - note: note
+          grn: grn
+          preferredRefundMethod: null
+          orderGrn: orderGrn
+          refundPaymentCost: true
+          customerInfo:
+            firstname: firstname
+            grn: grn
+            phone: phone
+            email: email
+            lastname: lastname
+          history:
+          - date: 2000-01-23T04:56:07.000+00:00
+            note: note
+            status: status
+          - date: 2000-01-23T04:56:07.000+00:00
+            note: note
+            status: status
+          products:
+          - reason: reason
+            grn: grn
+            requested:
+              note: note
+              quantity: quantity
+            approved:
+              note: note
+              quantity: quantity
+            verified:
+              note: note
+              quantity: quantity
+            refunded:
+              note: note
+              quantity: quantity
+          - reason: reason
+            grn: grn
+            requested:
+              note: note
+              quantity: quantity
+            approved:
+              note: note
+              quantity: quantity
+            verified:
+              note: note
+              quantity: quantity
+            refunded:
+              note: note
+              quantity: quantity
+          returnAddress:
+            postalCode: postalCode
+            locality: locality
+            sublocality: sublocality
+            languageCode: languageCode
+            administrativeArea: administrativeArea
+            revision: 0
+            regionCode: regionCode
+            phoneNumber: phoneNumber
+            sortingCode: sortingCode
+            recipients:
+            - recipients
+            - recipients
+            organization: organization
+            additionalInfo: "{}"
+            addressLines:
+            - addressLines
+            - addressLines
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          refundShippingCost: true
+          orderData:
+            market: market
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            number: number
+            subtotals:
+              key:
+                code: null
+                value:
+                  micros: 5
+                  units: units
+            grn: grn
+            channel: channel
+            currency: null
+            totals:
+              key:
+                code: null
+                value:
+                  micros: 5
+                  units: units
+            items:
+            - rowListPrice:
+                micros: 5
+                units: units
+              productOptions: productOptions
+              productIsVirtual: true
+              productGrn: productGrn
+              productImg: productImg
+              qtyShipped: 5
+              rowSalePrice:
+                micros: 5
+                units: units
+              productData: productData
+              shipmentInfoReference: shipmentInfoReference
+              rowVatAmount:
+                micros: 5
+                units: units
+              vatCalculated: true
+              productName: productName
+              unitVatAmount:
+                micros: 5
+                units: units
+              productSku: productSku
+              productCode: productCode
+              qtyCommitted: 1
+              unitListPrice:
+                micros: 5
+                units: units
+              qtyOrdered: 6
+              vatPercentage: 2.302136
+              unitSalePrice:
+                micros: 5
+                units: units
+              id: id
+              promotionGrn:
+              - promotionGrn
+              - promotionGrn
+              vatInaccurate: true
+            - rowListPrice:
+                micros: 5
+                units: units
+              productOptions: productOptions
+              productIsVirtual: true
+              productGrn: productGrn
+              productImg: productImg
+              qtyShipped: 5
+              rowSalePrice:
+                micros: 5
+                units: units
+              productData: productData
+              shipmentInfoReference: shipmentInfoReference
+              rowVatAmount:
+                micros: 5
+                units: units
+              vatCalculated: true
+              productName: productName
+              unitVatAmount:
+                micros: 5
+                units: units
+              productSku: productSku
+              productCode: productCode
+              qtyCommitted: 1
+              unitListPrice:
+                micros: 5
+                units: units
+              qtyOrdered: 6
+              vatPercentage: 2.302136
+              unitSalePrice:
+                micros: 5
+                units: units
+              id: id
+              promotionGrn:
+              - promotionGrn
+              - promotionGrn
+              vatInaccurate: true
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          id: id
+          status: status
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - note: note
+          grn: grn
+          preferredRefundMethod: null
+          orderGrn: orderGrn
+          refundPaymentCost: true
+          customerInfo:
+            firstname: firstname
+            grn: grn
+            phone: phone
+            email: email
+            lastname: lastname
+          history:
+          - date: 2000-01-23T04:56:07.000+00:00
+            note: note
+            status: status
+          - date: 2000-01-23T04:56:07.000+00:00
+            note: note
+            status: status
+          products:
+          - reason: reason
+            grn: grn
+            requested:
+              note: note
+              quantity: quantity
+            approved:
+              note: note
+              quantity: quantity
+            verified:
+              note: note
+              quantity: quantity
+            refunded:
+              note: note
+              quantity: quantity
+          - reason: reason
+            grn: grn
+            requested:
+              note: note
+              quantity: quantity
+            approved:
+              note: note
+              quantity: quantity
+            verified:
+              note: note
+              quantity: quantity
+            refunded:
+              note: note
+              quantity: quantity
+          returnAddress:
+            postalCode: postalCode
+            locality: locality
+            sublocality: sublocality
+            languageCode: languageCode
+            administrativeArea: administrativeArea
+            revision: 0
+            regionCode: regionCode
+            phoneNumber: phoneNumber
+            sortingCode: sortingCode
+            recipients:
+            - recipients
+            - recipients
+            organization: organization
+            additionalInfo: "{}"
+            addressLines:
+            - addressLines
+            - addressLines
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          refundShippingCost: true
+          orderData:
+            market: market
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            number: number
+            subtotals:
+              key:
+                code: null
+                value:
+                  micros: 5
+                  units: units
+            grn: grn
+            channel: channel
+            currency: null
+            totals:
+              key:
+                code: null
+                value:
+                  micros: 5
+                  units: units
+            items:
+            - rowListPrice:
+                micros: 5
+                units: units
+              productOptions: productOptions
+              productIsVirtual: true
+              productGrn: productGrn
+              productImg: productImg
+              qtyShipped: 5
+              rowSalePrice:
+                micros: 5
+                units: units
+              productData: productData
+              shipmentInfoReference: shipmentInfoReference
+              rowVatAmount:
+                micros: 5
+                units: units
+              vatCalculated: true
+              productName: productName
+              unitVatAmount:
+                micros: 5
+                units: units
+              productSku: productSku
+              productCode: productCode
+              qtyCommitted: 1
+              unitListPrice:
+                micros: 5
+                units: units
+              qtyOrdered: 6
+              vatPercentage: 2.302136
+              unitSalePrice:
+                micros: 5
+                units: units
+              id: id
+              promotionGrn:
+              - promotionGrn
+              - promotionGrn
+              vatInaccurate: true
+            - rowListPrice:
+                micros: 5
+                units: units
+              productOptions: productOptions
+              productIsVirtual: true
+              productGrn: productGrn
+              productImg: productImg
+              qtyShipped: 5
+              rowSalePrice:
+                micros: 5
+                units: units
+              productData: productData
+              shipmentInfoReference: shipmentInfoReference
+              rowVatAmount:
+                micros: 5
+                units: units
+              vatCalculated: true
+              productName: productName
+              unitVatAmount:
+                micros: 5
+                units: units
+              productSku: productSku
+              productCode: productCode
+              qtyCommitted: 1
+              unitListPrice:
+                micros: 5
+                units: units
+              qtyOrdered: 6
+              vatPercentage: 2.302136
+              unitSalePrice:
+                micros: 5
+                units: units
+              id: id
+              promotionGrn:
+              - promotionGrn
+              - promotionGrn
+              vatInaccurate: true
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          id: id
+          status: status
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        returns:
+          items:
+            $ref: '#/components/schemas/rmaReturnResponse'
+          type: array
+        nextPageToken:
+          type: string
+      type: object
+    rmaMoney:
+      example:
+        micros: 5
+        units: units
+      properties:
+        units:
+          description: |-
+            The whole units of the amount.
+            For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
+          format: int64
+          type: string
+        micros:
+          description: |-
+            Number of micro (10^-6) units of the amount.
+            The value must be between -999,999 and +999,999 inclusive.
+            If `units` is positive, `micros` must be positive or zero.
+            If `units` is zero, `micros` can be positive, zero, or negative.
+            If `units` is negative, `micros` must be negative or zero.
+            For example $-1.75 is represented as `units`=-1 and `micros`=-750,000.
+          format: int32
+          type: integer
+      type: object
+    rmaNoteResponse:
+      example:
+        note: note
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        grn: grn
+        deletedAt: 2000-01-23T04:56:07.000+00:00
+        author: author
+        id: id
+        updatedAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        id:
+          type: string
+        grn:
+          type: string
+        author:
+          type: string
+        note:
+          type: string
+        createdAt:
+          format: date-time
+          type: string
+        updatedAt:
+          format: date-time
+          type: string
+        deletedAt:
+          format: date-time
+          type: string
+      type: object
+    rmaOrderData:
+      example:
+        market: market
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        number: number
+        subtotals:
+          key:
+            code: null
+            value:
+              micros: 5
+              units: units
+        grn: grn
+        channel: channel
+        currency: null
+        totals:
+          key:
+            code: null
+            value:
+              micros: 5
+              units: units
+        items:
+        - rowListPrice:
+            micros: 5
+            units: units
+          productOptions: productOptions
+          productIsVirtual: true
+          productGrn: productGrn
+          productImg: productImg
+          qtyShipped: 5
+          rowSalePrice:
+            micros: 5
+            units: units
+          productData: productData
+          shipmentInfoReference: shipmentInfoReference
+          rowVatAmount:
+            micros: 5
+            units: units
+          vatCalculated: true
+          productName: productName
+          unitVatAmount:
+            micros: 5
+            units: units
+          productSku: productSku
+          productCode: productCode
+          qtyCommitted: 1
+          unitListPrice:
+            micros: 5
+            units: units
+          qtyOrdered: 6
+          vatPercentage: 2.302136
+          unitSalePrice:
+            micros: 5
+            units: units
+          id: id
+          promotionGrn:
+          - promotionGrn
+          - promotionGrn
+          vatInaccurate: true
+        - rowListPrice:
+            micros: 5
+            units: units
+          productOptions: productOptions
+          productIsVirtual: true
+          productGrn: productGrn
+          productImg: productImg
+          qtyShipped: 5
+          rowSalePrice:
+            micros: 5
+            units: units
+          productData: productData
+          shipmentInfoReference: shipmentInfoReference
+          rowVatAmount:
+            micros: 5
+            units: units
+          vatCalculated: true
+          productName: productName
+          unitVatAmount:
+            micros: 5
+            units: units
+          productSku: productSku
+          productCode: productCode
+          qtyCommitted: 1
+          unitListPrice:
+            micros: 5
+            units: units
+          qtyOrdered: 6
+          vatPercentage: 2.302136
+          unitSalePrice:
+            micros: 5
+            units: units
+          id: id
+          promotionGrn:
+          - promotionGrn
+          - promotionGrn
+          vatInaccurate: true
+        updatedAt: 2000-01-23T04:56:07.000+00:00
+        status: status
+      properties:
+        createdAt:
+          format: date-time
+          type: string
+        updatedAt:
+          format: date-time
+          type: string
+        grn:
+          type: string
+        number:
+          type: string
+        status:
+          type: string
+        channel:
+          type: string
+        market:
+          type: string
+        items:
+          items:
+            $ref: '#/components/schemas/rmaOrderDataItem'
+          type: array
+        currency:
+          $ref: '#/components/schemas/rmaCurrency'
+        subtotals:
+          additionalProperties:
+            $ref: '#/components/schemas/OrderDataSubtotal'
+          type: object
+        totals:
+          additionalProperties:
+            $ref: '#/components/schemas/OrderDataTotal'
+          type: object
+      type: object
+    rmaOrderDataItem:
+      example:
+        rowListPrice:
+          micros: 5
+          units: units
+        productOptions: productOptions
+        productIsVirtual: true
+        productGrn: productGrn
+        productImg: productImg
+        qtyShipped: 5
+        rowSalePrice:
+          micros: 5
+          units: units
+        productData: productData
+        shipmentInfoReference: shipmentInfoReference
+        rowVatAmount:
+          micros: 5
+          units: units
+        vatCalculated: true
+        productName: productName
+        unitVatAmount:
+          micros: 5
+          units: units
+        productSku: productSku
+        productCode: productCode
+        qtyCommitted: 1
+        unitListPrice:
+          micros: 5
+          units: units
+        qtyOrdered: 6
+        vatPercentage: 2.302136
+        unitSalePrice:
+          micros: 5
+          units: units
+        id: id
+        promotionGrn:
+        - promotionGrn
+        - promotionGrn
+        vatInaccurate: true
+      properties:
+        id:
+          type: string
+        productGrn:
+          type: string
+        qtyOrdered:
+          format: int64
+          type: integer
+        qtyCommitted:
+          format: int64
+          title: keep in sync with inventory qty_committed
+          type: integer
+        qtyShipped:
+          format: int64
+          title: calculated field
+          type: integer
+        unitSalePrice:
+          $ref: '#/components/schemas/rmaMoney'
+        unitListPrice:
+          $ref: '#/components/schemas/rmaMoney'
+        unitVatAmount:
+          $ref: '#/components/schemas/rmaMoney'
+        rowSalePrice:
+          $ref: '#/components/schemas/rmaMoney'
+        rowListPrice:
+          $ref: '#/components/schemas/rmaMoney'
+        rowVatAmount:
+          $ref: '#/components/schemas/rmaMoney'
+        vatPercentage:
+          format: float
+          title: The VAT percentage to show (not to be used for calculation)
+          type: number
+        vatInaccurate:
+          title: Is set to true if the VAT percentage is inaccurate (fallback with
+            BaseCalculator)
+          type: boolean
+        vatCalculated:
+          title: Is set to true if the VAT percentage is inaccurate (fallback with
+            BaseCalculator)
+          type: boolean
+        productName:
+          type: string
+        productCode:
+          type: string
+        productSku:
+          type: string
+        productOptions:
+          type: string
+        productImg:
+          title: asset grn
+          type: string
+        productData:
+          type: string
+        shipmentInfoReference:
+          type: string
+        promotionGrn:
+          items:
+            type: string
+          type: array
+        productIsVirtual:
+          type: boolean
+      type: object
+    rmaPostalAddress:
+      description: |-
+        Represents a postal address, e.g. for postal delivery or payments addresses.
+        Given a postal address, a postal service can deliver items to a premise, P.O.
+        Box or similar.
+        It is not intended to model geographical locations (roads, towns,
+        mountains).
+
+        In typical usage an address would be created via user input or from importing
+        existing data, depending on the type of process.
+
+        Advice on address input / editing:
+         - Use an i18n-ready address widget such as
+           https://github.com/google/libaddressinput)
+        - Users should not be presented with UI elements for input or editing of
+          fields outside countries where that field is used.
+
+        For more guidance on how to use this schema, please see:
+        https://support.google.com/business/answer/6397478
+      example:
+        postalCode: postalCode
+        locality: locality
+        sublocality: sublocality
+        languageCode: languageCode
+        administrativeArea: administrativeArea
+        revision: 0
+        regionCode: regionCode
+        phoneNumber: phoneNumber
+        sortingCode: sortingCode
+        recipients:
+        - recipients
+        - recipients
+        organization: organization
+        additionalInfo: "{}"
+        addressLines:
+        - addressLines
+        - addressLines
+      properties:
+        revision:
+          description: |-
+            The schema revision of the `PostalAddress`. This must be set to 0, which is
+            the latest revision.
+
+            All new revisions **must** be backward compatible with old revisions.
+          format: int32
+          type: integer
+        regionCode:
+          description: |-
+            Required. CLDR region code of the country/region of the address. This
+            is never inferred and it is up to the user to ensure the value is
+            correct. See http://cldr.unicode.org/ and
+            http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html
+            for details. Example: "CH" for Switzerland.
+          type: string
+        languageCode:
+          description: |-
+            Optional. BCP-47 language code of the contents of this address (if
+            known). This is often the UI language of the input form or is expected
+            to match one of the languages used in the address' country/region, or their
+            transliterated equivalents.
+            This can affect formatting in certain countries, but is not critical
+            to the correctness of the data and will never affect any validation or
+            other non-formatting related operations.
+
+            If this value is not known, it should be omitted (rather than specifying a
+            possibly incorrect default).
+
+            Examples: "zh-Hant", "ja", "ja-Latn", "en".
+          type: string
+        postalCode:
+          description: |-
+            Optional. Postal code of the address. Not all countries use or require
+            postal codes to be present, but where they are used, they may trigger
+            additional validation with other parts of the address (e.g. state/zip
+            validation in the U.S.A.).
+          type: string
+        sortingCode:
+          description: |-
+            Optional. Additional, country-specific, sorting code. This is not used
+            in most regions. Where it is used, the value is either a string like
+            "CEDEX", optionally followed by a number (e.g. "CEDEX 7"), or just a number
+            alone, representing the "sector code" (Jamaica), "delivery area indicator"
+            (Malawi) or "post office indicator" (e.g. Côte d'Ivoire).
+          type: string
+        administrativeArea:
+          description: |-
+            Optional. Highest administrative subdivision which is used for postal
+            addresses of a country or region.
+            For example, this can be a state, a province, an oblast, or a prefecture.
+            Specifically, for Spain this is the province and not the autonomous
+            community (e.g. "Barcelona" and not "Catalonia").
+            Many countries don't use an administrative area in postal addresses. E.g.
+            in Switzerland this should be left unpopulated.
+          type: string
+        locality:
+          description: |-
+            Optional. Generally refers to the city/town portion of the address.
+            Examples: US city, IT comune, UK post town.
+            In regions of the world where localities are not well defined or do not fit
+            into this structure well, leave locality empty and use address_lines.
+          type: string
+        sublocality:
+          description: |-
+            Optional. Sublocality of the address.
+            For example, this can be neighborhoods, boroughs, districts.
+          type: string
+        addressLines:
+          description: |-
+            Unstructured address lines describing the lower levels of an address.
+
+            Because values in address_lines do not have type information and may
+            sometimes contain multiple values in a single field (e.g.
+            "Austin, TX"), it is important that the line order is clear. The order of
+            address lines should be "envelope order" for the country/region of the
+            address. In places where this can vary (e.g. Japan), address_language is
+            used to make it explicit (e.g. "ja" for large-to-small ordering and
+            "ja-Latn" or "en" for small-to-large). This way, the most specific line of
+            an address can be selected based on the language.
+
+            The minimum permitted structural representation of an address consists
+            of a region_code with all remaining information placed in the
+            address_lines. It would be possible to format such an address very
+            approximately without geocoding, but no semantic reasoning could be
+            made about any of the address components until it was at least
+            partially resolved.
+
+            Creating an address only containing a region_code and address_lines, and
+            then geocoding is the recommended way to handle completely unstructured
+            addresses (as opposed to guessing which parts of the address should be
+            localities or administrative areas).
+          items:
+            type: string
+          type: array
+        recipients:
+          description: |-
+            Optional. The recipient at the address.
+            This field may, under certain circumstances, contain multiline information.
+            For example, it might contain "care of" information.
+          items:
+            type: string
+          type: array
+        organization:
+          description: Optional. The name of the organization at the address.
+          type: string
+        phoneNumber:
+          description: Optional.
+          type: string
+        additionalInfo:
+          description: Optional.
+          properties: {}
+          type: object
+      type: object
+    rmaRefundMethod:
+      default: REFUND_METHOD_UNKNOWN
+      enum:
+      - REFUND_METHOD_UNKNOWN
+      - REFUND_METHOD_OFFLINE
+      - REFUND_METHOD_COUPON
+      - REFUND_METHOD_SAME_AS_PAYMENT
+      type: string
+    rmaRefundReturnRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaRefundReturnResponse:
+      type: object
+    rmaRejectReturnRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaRejectReturnResponse:
+      type: object
+    rmaReturnHistory:
+      example:
+        date: 2000-01-23T04:56:07.000+00:00
+        note: note
+        status: status
+      properties:
+        date:
+          format: date-time
+          type: string
+        status:
+          type: string
+        note:
+          type: string
+      type: object
+    rmaReturnProduct:
+      example:
+        reason: reason
+        grn: grn
+        requested:
+          note: note
+          quantity: quantity
+        approved:
+          note: note
+          quantity: quantity
+        verified:
+          note: note
+          quantity: quantity
+        refunded:
+          note: note
+          quantity: quantity
+      properties:
+        grn:
+          type: string
+        reason:
+          type: string
+        requested:
+          $ref: '#/components/schemas/rmaReturnProductProperty'
+        approved:
+          $ref: '#/components/schemas/rmaReturnProductProperty'
+        verified:
+          $ref: '#/components/schemas/rmaReturnProductProperty'
+        refunded:
+          $ref: '#/components/schemas/rmaReturnProductProperty'
+      type: object
+    rmaReturnProductProperty:
+      example:
+        note: note
+        quantity: quantity
+      properties:
+        quantity:
+          format: uint64
+          type: string
+        note:
+          type: string
+      type: object
+    rmaReturnResponse:
+      example:
+        note: note
+        grn: grn
+        preferredRefundMethod: null
+        orderGrn: orderGrn
+        refundPaymentCost: true
+        customerInfo:
+          firstname: firstname
+          grn: grn
+          phone: phone
+          email: email
+          lastname: lastname
+        history:
+        - date: 2000-01-23T04:56:07.000+00:00
+          note: note
+          status: status
+        - date: 2000-01-23T04:56:07.000+00:00
+          note: note
+          status: status
+        products:
+        - reason: reason
+          grn: grn
+          requested:
+            note: note
+            quantity: quantity
+          approved:
+            note: note
+            quantity: quantity
+          verified:
+            note: note
+            quantity: quantity
+          refunded:
+            note: note
+            quantity: quantity
+        - reason: reason
+          grn: grn
+          requested:
+            note: note
+            quantity: quantity
+          approved:
+            note: note
+            quantity: quantity
+          verified:
+            note: note
+            quantity: quantity
+          refunded:
+            note: note
+            quantity: quantity
+        returnAddress:
+          postalCode: postalCode
+          locality: locality
+          sublocality: sublocality
+          languageCode: languageCode
+          administrativeArea: administrativeArea
+          revision: 0
+          regionCode: regionCode
+          phoneNumber: phoneNumber
+          sortingCode: sortingCode
+          recipients:
+          - recipients
+          - recipients
+          organization: organization
+          additionalInfo: "{}"
+          addressLines:
+          - addressLines
+          - addressLines
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        refundShippingCost: true
+        orderData:
+          market: market
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          number: number
+          subtotals:
+            key:
+              code: null
+              value:
+                micros: 5
+                units: units
+          grn: grn
+          channel: channel
+          currency: null
+          totals:
+            key:
+              code: null
+              value:
+                micros: 5
+                units: units
+          items:
+          - rowListPrice:
+              micros: 5
+              units: units
+            productOptions: productOptions
+            productIsVirtual: true
+            productGrn: productGrn
+            productImg: productImg
+            qtyShipped: 5
+            rowSalePrice:
+              micros: 5
+              units: units
+            productData: productData
+            shipmentInfoReference: shipmentInfoReference
+            rowVatAmount:
+              micros: 5
+              units: units
+            vatCalculated: true
+            productName: productName
+            unitVatAmount:
+              micros: 5
+              units: units
+            productSku: productSku
+            productCode: productCode
+            qtyCommitted: 1
+            unitListPrice:
+              micros: 5
+              units: units
+            qtyOrdered: 6
+            vatPercentage: 2.302136
+            unitSalePrice:
+              micros: 5
+              units: units
+            id: id
+            promotionGrn:
+            - promotionGrn
+            - promotionGrn
+            vatInaccurate: true
+          - rowListPrice:
+              micros: 5
+              units: units
+            productOptions: productOptions
+            productIsVirtual: true
+            productGrn: productGrn
+            productImg: productImg
+            qtyShipped: 5
+            rowSalePrice:
+              micros: 5
+              units: units
+            productData: productData
+            shipmentInfoReference: shipmentInfoReference
+            rowVatAmount:
+              micros: 5
+              units: units
+            vatCalculated: true
+            productName: productName
+            unitVatAmount:
+              micros: 5
+              units: units
+            productSku: productSku
+            productCode: productCode
+            qtyCommitted: 1
+            unitListPrice:
+              micros: 5
+              units: units
+            qtyOrdered: 6
+            vatPercentage: 2.302136
+            unitSalePrice:
+              micros: 5
+              units: units
+            id: id
+            promotionGrn:
+            - promotionGrn
+            - promotionGrn
+            vatInaccurate: true
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+          status: status
+        id: id
+        status: status
+        updatedAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        id:
+          type: string
+        grn:
+          type: string
+        orderGrn:
+          type: string
+        status:
+          type: string
+        products:
+          items:
+            $ref: '#/components/schemas/rmaReturnProduct'
+          type: array
+        preferredRefundMethod:
+          $ref: '#/components/schemas/rmaRefundMethod'
+        refundShippingCost:
+          type: boolean
+        refundPaymentCost:
+          type: boolean
+        customerInfo:
+          $ref: '#/components/schemas/rmaCustomerInfo'
+        returnAddress:
+          $ref: '#/components/schemas/rmaPostalAddress'
+        note:
+          type: string
+        history:
+          items:
+            $ref: '#/components/schemas/rmaReturnHistory'
+          type: array
+        createdAt:
+          format: date-time
+          type: string
+        updatedAt:
+          format: date-time
+          type: string
+        orderData:
+          $ref: '#/components/schemas/rmaOrderData'
+      type: object
+    rmaSetReceivedItemsRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+        items:
+          items:
+            $ref: '#/components/schemas/rmaSetReceivedItemsRequestItem'
+          type: array
+      required:
+      - id
+      - items
+      - tenantId
+      type: object
+    rmaSetReceivedItemsRequestItem:
+      properties:
+        grn:
+          type: string
+        quantity:
+          format: uint64
+          type: string
+      required:
+      - grn
+      - quantity
+      type: object
+    rmaSetReceivedItemsResponse:
+      type: object
+    rmaSkipReturnStatusRequest:
+      properties:
+        tenantId:
+          type: string
+        id:
+          type: string
+      required:
+      - id
+      - tenantId
+      type: object
+    rmaSkipReturnStatusResponse:
+      type: object
+    rmaSortOrder:
+      default: DESC
+      enum:
+      - DESC
+      - ASC
+      type: string
+    rpcStatus:
+      example:
+        code: 0
+        details:
+        - '@type': '@type'
+        - '@type': '@type'
+        message: message
+      properties:
+        code:
+          format: int32
+          type: integer
+        message:
+          type: string
+        details:
+          items:
+            $ref: '#/components/schemas/protobufAny'
+          type: array
+      type: object
+  securitySchemes:
+    standardAuthorization:
+      flows: {}
+      type: oauth2
+x-original-swagger-version: "2.0"
+
