@@ -669,7 +669,7 @@ components:
       type: object
     OrderDataSubtotal:
       example:
-        code: null
+        code: UNKNOWN
         value:
           micros: 5
           units: units
@@ -696,7 +696,7 @@ components:
       type: string
     OrderDataTotal:
       example:
-        code: null
+        code: UNKNOWN
         value:
           micros: 5
           units: units
@@ -1209,7 +1209,7 @@ components:
         returns:
         - note: note
           grn: grn
-          preferredRefundMethod: null
+          preferredRefundMethod: REFUND_METHOD_UNKNOWN
           orderGrn: orderGrn
           refundPaymentCost: true
           customerInfo:
@@ -1280,16 +1280,16 @@ components:
             number: number
             subtotals:
               key:
-                code: null
+                code: UNKNOWN
                 value:
                   micros: 5
                   units: units
             grn: grn
             channel: channel
-            currency: null
+            currency: XXX
             totals:
               key:
-                code: null
+                code: UNKNOWN
                 value:
                   micros: 5
                   units: units
@@ -1375,7 +1375,7 @@ components:
           updatedAt: 2000-01-23T04:56:07.000+00:00
         - note: note
           grn: grn
-          preferredRefundMethod: null
+          preferredRefundMethod: REFUND_METHOD_UNKNOWN
           orderGrn: orderGrn
           refundPaymentCost: true
           customerInfo:
@@ -1446,16 +1446,16 @@ components:
             number: number
             subtotals:
               key:
-                code: null
+                code: UNKNOWN
                 value:
                   micros: 5
                   units: units
             grn: grn
             channel: channel
-            currency: null
+            currency: XXX
             totals:
               key:
-                code: null
+                code: UNKNOWN
                 value:
                   micros: 5
                   units: units
@@ -1604,16 +1604,16 @@ components:
         number: number
         subtotals:
           key:
-            code: null
+            code: UNKNOWN
             value:
               micros: 5
               units: units
         grn: grn
         channel: channel
-        currency: null
+        currency: XXX
         totals:
           key:
-            code: null
+            code: UNKNOWN
             value:
               micros: 5
               units: units
@@ -2070,7 +2070,7 @@ components:
       example:
         note: note
         grn: grn
-        preferredRefundMethod: null
+        preferredRefundMethod: REFUND_METHOD_UNKNOWN
         orderGrn: orderGrn
         refundPaymentCost: true
         customerInfo:
@@ -2141,16 +2141,16 @@ components:
           number: number
           subtotals:
             key:
-              code: null
+              code: UNKNOWN
               value:
                 micros: 5
                 units: units
           grn: grn
           channel: channel
-          currency: null
+          currency: XXX
           totals:
             key:
-              code: null
+              code: UNKNOWN
               value:
                 micros: 5
                 units: units

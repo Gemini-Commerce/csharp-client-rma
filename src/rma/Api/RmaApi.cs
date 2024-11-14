@@ -327,7 +327,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaNoteResponse</returns>
-        System.Threading.Tasks.Task<RmaNoteResponse> AddNoteAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RmaNoteResponse> AddNoteAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Add a note to an RMA
@@ -340,7 +340,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaNoteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RmaNoteResponse>> AddNoteWithHttpInfoAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RmaNoteResponse>> AddNoteWithHttpInfoAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Approve a return
         /// </summary>
@@ -352,7 +352,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RpcStatus</returns>
-        System.Threading.Tasks.Task<RpcStatus> ApproveReturnAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RpcStatus> ApproveReturnAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Approve a return
@@ -365,7 +365,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RpcStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RpcStatus>> ApproveReturnWithHttpInfoAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RpcStatus>> ApproveReturnWithHttpInfoAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Cancel a return
         /// </summary>
@@ -377,7 +377,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CancelReturnAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> CancelReturnAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel a return
@@ -390,7 +390,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CancelReturnWithHttpInfoAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelReturnWithHttpInfoAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Confirm return approve items
         /// </summary>
@@ -402,7 +402,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConfirmReturnApproveItemsAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ConfirmReturnApproveItemsAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Confirm return approve items
@@ -415,7 +415,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmReturnApproveItemsWithHttpInfoAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmReturnApproveItemsWithHttpInfoAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a return
         /// </summary>
@@ -427,7 +427,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaReturnResponse</returns>
-        System.Threading.Tasks.Task<RmaReturnResponse> CreateReturnAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RmaReturnResponse> CreateReturnAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a return
@@ -440,7 +440,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaReturnResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RmaReturnResponse>> CreateReturnWithHttpInfoAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RmaReturnResponse>> CreateReturnWithHttpInfoAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete a note from an RMA
         /// </summary>
@@ -452,7 +452,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DeleteNoteAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> DeleteNoteAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete a note from an RMA
@@ -465,7 +465,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNoteWithHttpInfoAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNoteWithHttpInfoAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit a note on an RMA
         /// </summary>
@@ -477,7 +477,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaNoteResponse</returns>
-        System.Threading.Tasks.Task<RmaNoteResponse> EditNoteAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RmaNoteResponse> EditNoteAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit a note on an RMA
@@ -490,7 +490,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaNoteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RmaNoteResponse>> EditNoteWithHttpInfoAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RmaNoteResponse>> EditNoteWithHttpInfoAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get a return
         /// </summary>
@@ -502,7 +502,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaReturnResponse</returns>
-        System.Threading.Tasks.Task<RmaReturnResponse> GetReturnAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RmaReturnResponse> GetReturnAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get a return
@@ -515,7 +515,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaReturnResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RmaReturnResponse>> GetReturnWithHttpInfoAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RmaReturnResponse>> GetReturnWithHttpInfoAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List notes by return id
         /// </summary>
@@ -527,7 +527,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaListNotesByReturnIdResponse</returns>
-        System.Threading.Tasks.Task<RmaListNotesByReturnIdResponse> ListNotesByReturnIdAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RmaListNotesByReturnIdResponse> ListNotesByReturnIdAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List notes by return id
@@ -540,7 +540,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaListNotesByReturnIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RmaListNotesByReturnIdResponse>> ListNotesByReturnIdWithHttpInfoAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RmaListNotesByReturnIdResponse>> ListNotesByReturnIdWithHttpInfoAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List returns
         /// </summary>
@@ -552,7 +552,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaListReturnsResponse</returns>
-        System.Threading.Tasks.Task<RmaListReturnsResponse> ListReturnsAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RmaListReturnsResponse> ListReturnsAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List returns
@@ -565,7 +565,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaListReturnsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RmaListReturnsResponse>> ListReturnsWithHttpInfoAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RmaListReturnsResponse>> ListReturnsWithHttpInfoAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Refund a return
         /// </summary>
@@ -577,7 +577,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RefundReturnAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> RefundReturnAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Refund a return
@@ -590,7 +590,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RefundReturnWithHttpInfoAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RefundReturnWithHttpInfoAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Reject a return
         /// </summary>
@@ -602,7 +602,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RejectReturnAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> RejectReturnAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Reject a return
@@ -615,7 +615,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RejectReturnWithHttpInfoAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RejectReturnWithHttpInfoAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Set received items
         /// </summary>
@@ -627,7 +627,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SetReceivedItemsAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> SetReceivedItemsAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Set received items
@@ -640,7 +640,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetReceivedItemsWithHttpInfoAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetReceivedItemsWithHttpInfoAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Skip a return status
         /// </summary>
@@ -652,7 +652,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SkipReturnStatusAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> SkipReturnStatusAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Skip a return status
@@ -665,7 +665,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SkipReturnStatusWithHttpInfoAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> SkipReturnStatusWithHttpInfoAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -865,7 +865,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaNoteResponse</returns>
-        public async System.Threading.Tasks.Task<RmaNoteResponse> AddNoteAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RmaNoteResponse> AddNoteAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RmaNoteResponse> localVarResponse = await AddNoteWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -879,7 +879,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaNoteResponse)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaNoteResponse>> AddNoteWithHttpInfoAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaNoteResponse>> AddNoteWithHttpInfoAsync(RmaAddNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1011,7 +1011,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RpcStatus</returns>
-        public async System.Threading.Tasks.Task<RpcStatus> ApproveReturnAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RpcStatus> ApproveReturnAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RpcStatus> localVarResponse = await ApproveReturnWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1025,7 +1025,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RpcStatus)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RpcStatus>> ApproveReturnWithHttpInfoAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RpcStatus>> ApproveReturnWithHttpInfoAsync(RmaApproveReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1157,7 +1157,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CancelReturnAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> CancelReturnAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await CancelReturnWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1171,7 +1171,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> CancelReturnWithHttpInfoAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> CancelReturnWithHttpInfoAsync(RmaCancelReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1303,7 +1303,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConfirmReturnApproveItemsAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ConfirmReturnApproveItemsAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await ConfirmReturnApproveItemsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1317,7 +1317,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> ConfirmReturnApproveItemsWithHttpInfoAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> ConfirmReturnApproveItemsWithHttpInfoAsync(RmaConfirmReturnApproveItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1449,7 +1449,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaReturnResponse</returns>
-        public async System.Threading.Tasks.Task<RmaReturnResponse> CreateReturnAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RmaReturnResponse> CreateReturnAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RmaReturnResponse> localVarResponse = await CreateReturnWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1463,7 +1463,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaReturnResponse)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaReturnResponse>> CreateReturnWithHttpInfoAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaReturnResponse>> CreateReturnWithHttpInfoAsync(RmaCreateReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1595,7 +1595,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DeleteNoteAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> DeleteNoteAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await DeleteNoteWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1609,7 +1609,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> DeleteNoteWithHttpInfoAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> DeleteNoteWithHttpInfoAsync(RmaDeleteNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1741,7 +1741,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaNoteResponse</returns>
-        public async System.Threading.Tasks.Task<RmaNoteResponse> EditNoteAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RmaNoteResponse> EditNoteAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RmaNoteResponse> localVarResponse = await EditNoteWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1755,7 +1755,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaNoteResponse)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaNoteResponse>> EditNoteWithHttpInfoAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaNoteResponse>> EditNoteWithHttpInfoAsync(RmaEditNoteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1887,7 +1887,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaReturnResponse</returns>
-        public async System.Threading.Tasks.Task<RmaReturnResponse> GetReturnAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RmaReturnResponse> GetReturnAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RmaReturnResponse> localVarResponse = await GetReturnWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1901,7 +1901,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaReturnResponse)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaReturnResponse>> GetReturnWithHttpInfoAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaReturnResponse>> GetReturnWithHttpInfoAsync(RmaGetReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2033,7 +2033,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaListNotesByReturnIdResponse</returns>
-        public async System.Threading.Tasks.Task<RmaListNotesByReturnIdResponse> ListNotesByReturnIdAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RmaListNotesByReturnIdResponse> ListNotesByReturnIdAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RmaListNotesByReturnIdResponse> localVarResponse = await ListNotesByReturnIdWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2047,7 +2047,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaListNotesByReturnIdResponse)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaListNotesByReturnIdResponse>> ListNotesByReturnIdWithHttpInfoAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaListNotesByReturnIdResponse>> ListNotesByReturnIdWithHttpInfoAsync(RmaListNotesByReturnIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2179,7 +2179,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RmaListReturnsResponse</returns>
-        public async System.Threading.Tasks.Task<RmaListReturnsResponse> ListReturnsAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RmaListReturnsResponse> ListReturnsAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<RmaListReturnsResponse> localVarResponse = await ListReturnsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2193,7 +2193,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RmaListReturnsResponse)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaListReturnsResponse>> ListReturnsWithHttpInfoAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<RmaListReturnsResponse>> ListReturnsWithHttpInfoAsync(RmaListReturnsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2325,7 +2325,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RefundReturnAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> RefundReturnAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await RefundReturnWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2339,7 +2339,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> RefundReturnWithHttpInfoAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> RefundReturnWithHttpInfoAsync(RmaRefundReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2471,7 +2471,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RejectReturnAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> RejectReturnAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await RejectReturnWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2485,7 +2485,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> RejectReturnWithHttpInfoAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> RejectReturnWithHttpInfoAsync(RmaRejectReturnRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2617,7 +2617,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SetReceivedItemsAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> SetReceivedItemsAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await SetReceivedItemsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2631,7 +2631,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> SetReceivedItemsWithHttpInfoAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> SetReceivedItemsWithHttpInfoAsync(RmaSetReceivedItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2763,7 +2763,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SkipReturnStatusAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> SkipReturnStatusAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             rma.Client.ApiResponse<Object> localVarResponse = await SkipReturnStatusWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2777,7 +2777,7 @@ namespace rma.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> SkipReturnStatusWithHttpInfoAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<rma.Client.ApiResponse<Object>> SkipReturnStatusWithHttpInfoAsync(RmaSkipReturnStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)

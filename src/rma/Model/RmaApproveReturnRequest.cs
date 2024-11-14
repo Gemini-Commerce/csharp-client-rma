@@ -36,7 +36,10 @@ namespace rma.Model
         /// Initializes a new instance of the <see cref="RmaApproveReturnRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RmaApproveReturnRequest() { }
+        protected RmaApproveReturnRequest()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="RmaApproveReturnRequest" /> class.
         /// </summary>
@@ -67,6 +70,7 @@ namespace rma.Model
                 throw new ArgumentNullException("items is a required property for RmaApproveReturnRequest and cannot be null");
             }
             this.Items = items;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -100,6 +104,12 @@ namespace rma.Model
         public List<RmaApproveReturnRequestItem> Items { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -112,6 +122,7 @@ namespace rma.Model
             sb.Append("  RefundShippingCost: ").Append(RefundShippingCost).Append("\n");
             sb.Append("  RefundPaymentCost: ").Append(RefundPaymentCost).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,7 +141,7 @@ namespace rma.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

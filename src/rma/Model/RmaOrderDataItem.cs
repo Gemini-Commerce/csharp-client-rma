@@ -83,6 +83,7 @@ namespace rma.Model
             this.ShipmentInfoReference = shipmentInfoReference;
             this.PromotionGrn = promotionGrn;
             this.ProductIsVirtual = productIsVirtual;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -224,6 +225,12 @@ namespace rma.Model
         public bool ProductIsVirtual { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -254,6 +261,7 @@ namespace rma.Model
             sb.Append("  ShipmentInfoReference: ").Append(ShipmentInfoReference).Append("\n");
             sb.Append("  PromotionGrn: ").Append(PromotionGrn).Append("\n");
             sb.Append("  ProductIsVirtual: ").Append(ProductIsVirtual).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -272,7 +280,7 @@ namespace rma.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }
