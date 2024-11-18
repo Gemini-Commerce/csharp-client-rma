@@ -679,6 +679,7 @@ components:
         value:
           $ref: '#/components/schemas/rmaMoney'
       type: object
+      x-golang-getsetvalue-exists: true
     OrderDataSubtotalCode:
       default: UNKNOWN
       description: |2-
@@ -706,6 +707,7 @@ components:
         value:
           $ref: '#/components/schemas/rmaMoney'
       type: object
+      x-golang-getsetvalue-exists: true
     OrderDataTotalCode:
       default: UNKNOWN
       enum:
